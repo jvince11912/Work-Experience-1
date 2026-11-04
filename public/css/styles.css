@@ -43,12 +43,7 @@
   font-weight: 600;
   src: url('../fonts/Segoe UI Semibold');
 }
-@font-face {
-  font-family: 'Segoe UI';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fontsoe UI');
-}
+
 @font-face {
   font-family: 'Segoe UI';
   font-style: normal;
