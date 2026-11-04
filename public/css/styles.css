@@ -759,10 +759,44 @@ img {
     padding: 64px 0;
   }
 
+  .site-header--home .container {
+    flex-wrap: wrap;
+  }
+
+  .site-header--home nav {
+    width: 100%;
+  }
+
+  .site-header--home .nav-links {
+    flex-wrap: wrap;
+    gap: 8px 0;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .hero-text,
+  .hero-media {
+    min-width: 0;
+  }
+
+  .hero-media {
+    width: 100%;
+    max-width: 100%;
+    flex-shrink: 1;
+  }
+
+  .playbook-grid {
+    grid-template-columns: 1fr;
+  }
+
   .feature-row {
     grid-template-columns: 1fr;
-    gap: 32px;
-    margin-bottom: 64px;
+    gap: 25px;
+    margin-bottom: 50px;
   }
 
   .feature-row--reverse .feature-media {
