@@ -629,6 +629,15 @@ img {
 
 /* Contact */
 
+.honeypot-container {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .contact-layout {
   display: grid;
   grid-template-columns: 3fr 2fr;
