@@ -20,10 +20,9 @@ form.addEventListener('submit', async (event) => {
     // If it took less than xx seconds, intercept it
     if (secondsElapsed < allowedTime) {
         event.preventDefault(); // Stop the form from executing the actual network submit
-        
-        console.warn("Spam submission blocked via timer.");
-        
+         
        resetFormMessage();
+       button.disabled = false;
        return; 
 
     }
@@ -34,10 +33,10 @@ form.addEventListener('submit', async (event) => {
   //CHECK FOR HONEYPOT FIELD, RETURN IF SPAM. Destructure the data object to get the honeypot field value
   const { name, email, website , message} = data;
 
-   if (website) {
-       console.warn(`Spam detected from ${name} <${email}>: ${message}`);
+   if (website) { 
        //continue processing below form-status--success!! the request without throwing an error
        resetFormMessage();
+       button.disabled = false;
        return;
     }
 
@@ -64,7 +63,7 @@ form.addEventListener('submit', async (event) => {
 
 
 function resetFormMessage() {
-  form.reset
+  form.reset();
   statusEl.textContent = "Thanks, we'll be in touch within one business day.";
   statusEl.classList.add('form-status--success');
 }
